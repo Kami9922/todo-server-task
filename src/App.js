@@ -5,6 +5,7 @@ function App() {
   return (
     <div className='App'>
       <header className='App-header'>
+        <div className='main-title'>Todo</div>
         <Todo />
       </header>
     </div>
