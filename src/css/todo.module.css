@@ -1,0 +1,11 @@
+.todo {
+  margin-bottom: 20px;
+  border: solid #e7880b;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.main-title {
+  margin-bottom: 30px;
+  font-size: 54px;
+}
