@@ -1,3 +1,7 @@
+.todo-container {
+  display: flex;
+  flex-direction: column;
+}
 .todo {
   min-width: 250px;
   gap: 15px;
@@ -9,6 +13,7 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  font-weight: bold;
 }
 
 .loader {
@@ -34,4 +39,39 @@
 
 .hidden {
   display: none;
+}
+
+.search {
+  font-size: 18px;
+  font-weight: bold;
+  border: solid #e7880b;
+  border-radius: 10px;
+  padding: 7px;
+  margin-bottom: 15px;
+  width: 150px;
+  align-self: center;
+}
+
+.search-active {
+  padding: 7px;
+  color: #e7880b;
+  background-color: transparent;
+  border: none;
+  width: 150px;
+  align-self: center;
+  margin-bottom: 15px;
+}
+.search-active:hover {
+  box-shadow: none;
+}
+
+.sort-button {
+  margin-bottom: 15px;
+  background-color: #f1e8e8;
+  color: #000000;
+  border-radius: 10px;
+  padding: 5px;
+  font-weight: bold;
+  width: 200px;
+  align-self: center;
 }
