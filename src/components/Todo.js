@@ -78,8 +78,7 @@ const Todo = () => {
       }),
     })
       .then((rawResponse) => rawResponse.json())
-      .then((response) => {
-        console.log('Дело изменено!', response)
+      .then(() => {
         setEditingTodoId(null)
 
         refreshTodos()
@@ -94,9 +93,7 @@ const Todo = () => {
       method: 'DELETE',
     })
       .then((rawResponse) => rawResponse.json())
-      .then((response) => {
-        console.log('Дело удалено!', response)
-
+      .then(() => {
         refreshTodos()
       })
       .finally(() => setIsDeleting(false))
