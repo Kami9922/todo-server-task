@@ -1,13 +1,13 @@
 import './App.css'
 
-import Todo from './components/Todo'
+import TodoList from './components/TodoList'
 
 function App() {
   return (
     <div className='App'>
       <header className='App-header'>
         <div className='main-title'>TODO</div>
-        <Todo />
+        <TodoList />
       </header>
     </div>
   )
