@@ -3,34 +3,11 @@ import styles from '../css/todoInputs.module.css'
 const TodoInput = ({
   inputCreateValue,
   setInputCreateValue,
-  refreshTodos,
-  setIsCreating,
   isCreating,
   isSearching,
   setInputSearchValue,
+  createTodo,
 }) => {
-  const createTodo = (e) => {
-    e.preventDefault()
-    setIsCreating(true)
-
-    fetch('http://localhost:3005/todos', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json;charset=utf-8' },
-      body: JSON.stringify({
-        userId: 1,
-        id: new Date().valueOf(),
-        title: inputCreateValue,
-        completed: false,
-      }),
-    })
-      .then((rawResponse) => rawResponse.json())
-      .then(() => {
-        refreshTodos()
-      })
-      .finally(() => setIsCreating(false))
-      .finally(() => setInputCreateValue(''))
-  }
-
   return (
     <div className={styles['inputs-header']}>
       {isSearching ? (
